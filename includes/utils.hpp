@@ -18,7 +18,7 @@ T safe_syscall(T ret, std::string sysname)
 	return (ret);
 }
 
-#define SSTR( x ) static_cast< std::ostringstream & >( \
+#define SSTR( x ) static_cast< std::ostringstream const & >( \
     ( std::ostringstream() << std::dec << x ) ).str()
 
 std::string trimstr(std::string str, const std::string &charset);
